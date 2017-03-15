@@ -15,9 +15,10 @@ class Root extends React.Component {
     ]
 
     return(
-      <div>
-        <h1>RootToot</h1>
-        <Tabs tabs={tabs}/>
+      <div className='widgets'>
+        <div className='tabs__container'>
+          <Tabs tabs={tabs}/>
+        </div>
       </div>
     )
   }

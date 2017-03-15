@@ -1,2 +1,39 @@
-.tab-list {list-style-type: none;}
-.tab-header__selected {color: red;}
+/* Root */
+.widgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tabs */
+.tabs__container {width: 300px;}
+.tabs__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tabs__content {
+  padding: 5px;
+  border: solid blue;
+  border-width: 0px 2px 2px 2px;
+  border-radius: 0 0 5px 6px;
+  height: 200px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab {
+  color: blue;
+  flex-grow: 1;
+  text-align: center;
+  border: solid blue;
+  border-width: 2px 1px 2px 1px;
+  border-radius: 5px 5px 0px 0px;
+  cursor: pointer;
+}
+.tab:first-of-type {border-width: 2px 1px 2px 2px;}
+.tab:last-of-type {border-width: 2px 2px 2px 1px;}
+.tab__selected {color: red;}
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './header'
+import Tab from './Tab'
 
 class Tabs extends React.Component {
   constructor(props) {
@@ -19,16 +19,16 @@ class Tabs extends React.Component {
   render() {
     const selectedTab = this.props.tabs[this.state.tabIndex]
     const tabs = this.props.tabs.map((tab) =>
-      <Header selectTabByTitle={this.selectTabByTitle} title={tab.title} selected={selectedTab.title == tab.title} selectTab={this.selectTab}/>
+      <Tab selectTabByTitle={this.selectTabByTitle} title={tab.title} selected={selectedTab.title == tab.title} selectTab={this.selectTab}/>
     )
 
     return(
       <div>
-        <ul className='tab-list'>
+        <div className='tabs__header'>
           {tabs}
-        </ul>
+        </div>
 
-        <div>
+        <div className='tabs__content'>
           {selectedTab.content}
         </div>
       </div>
