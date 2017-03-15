@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Tabs from './components/tabs/tabs'
+import Clock from './components/clock/clock'
 
 class Root extends React.Component {
   constructor(props) {
@@ -17,7 +18,13 @@ class Root extends React.Component {
     return(
       <div className='widgets'>
         <div className='tabs__container'>
+          <h1>Tabs</h1>
           <Tabs tabs={tabs}/>
+        </div>
+
+        <div className='clock__container'>
+          <h1>Clock</h1>
+          <Clock/>
         </div>
       </div>
     )

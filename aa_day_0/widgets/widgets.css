@@ -5,6 +5,8 @@
   align-items: center;
 }
 
+body {font-family: 'Varela Round', sans-serif;}
+
 /* Tabs */
 .tabs__container {width: 300px;}
 .tabs__header {
@@ -14,7 +16,7 @@
 }
 .tabs__content {
   padding: 5px;
-  border: solid blue;
+  border: solid black;
   border-width: 0px 2px 2px 2px;
   border-radius: 0 0 5px 6px;
   height: 200px;
@@ -25,10 +27,9 @@
 }
 
 .tab {
-  color: blue;
   flex-grow: 1;
   text-align: center;
-  border: solid blue;
+  border: solid black;
   border-width: 2px 1px 2px 1px;
   border-radius: 5px 5px 0px 0px;
   cursor: pointer;
@@ -37,3 +38,14 @@
 .tab:last-of-type {border-width: 2px 2px 2px 1px;}
 .tab__selected {color: red;}
 
+.clock {
+  width: 500px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.clock__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
