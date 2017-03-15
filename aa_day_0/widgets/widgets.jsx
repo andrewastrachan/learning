@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Tabs from './tabs'
+import Tabs from './components/tabs/tabs'
 
 class Root extends React.Component {
   constructor(props) {
