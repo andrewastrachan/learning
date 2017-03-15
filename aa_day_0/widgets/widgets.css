@@ -38,14 +38,16 @@ body {font-family: 'Varela Round', sans-serif;}
 .tab:last-of-type {border-width: 2px 2px 2px 1px;}
 .tab__selected {color: red;}
 
+.clock__container {width: 500px;}
 .clock {
-  width: 500px;
+  width: 100%;
   border: 2px solid black;
   padding: 10px;
 }
-
 .clock__row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.autocomplete__container {width: 500px;}

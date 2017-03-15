@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Tab extends React.Component {
+export default class Tab extends React.Component {
   constructor(props) {
     super(props)
     this.selectTab = this.selectTab.bind(this)
@@ -20,5 +20,3 @@ class Tab extends React.Component {
     )
   }
 }
-
-export default Tab
