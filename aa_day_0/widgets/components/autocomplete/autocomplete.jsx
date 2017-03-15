@@ -20,7 +20,7 @@ export default class Autocomplete extends React.Component {
     const filteredNames = this.props.names.filter(((name) => {
       return name.toLowerCase().startsWith(this.state.search.toLowerCase())
     }).bind(this)).map(((name) => {
-      return <li onClick={this.selectName}>{name}</li>
+      return <li onClick={this.selectName} key={name}>{name}</li>
     }).bind(this))
 
     return (

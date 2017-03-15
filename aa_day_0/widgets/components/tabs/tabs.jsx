@@ -19,7 +19,7 @@ export default class Tabs extends React.Component {
   render() {
     const selectedTab = this.props.tabs[this.state.tabIndex]
     const tabs = this.props.tabs.map((tab) =>
-      <Tab selectTabByTitle={this.selectTabByTitle} title={tab.title} selected={selectedTab.title == tab.title} selectTab={this.selectTab}/>
+      <Tab selectTabByTitle={this.selectTabByTitle} key={tab.title} title={tab.title} selected={selectedTab.title == tab.title} selectTab={this.selectTab}/>
     )
 
     return(
