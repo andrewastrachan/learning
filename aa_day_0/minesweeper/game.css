@@ -16,4 +16,15 @@
   border: 2px solid #9b9b9b;
   background-color: #dddddd;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.tile > * {display: none;}
+.tile__revealed {
+  background-color: #9b9b9b;
+  border-color: #dddddd;
+}
+.tile__bombed > .bomb {display: block;}
+.tile__flagged > .flag {display: block;}

@@ -11,7 +11,7 @@ class Game extends React.Component {
   }
 
   updateGame() {
-    //stubby
+    debugger
   }
 
   render() {
