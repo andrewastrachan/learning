@@ -4,12 +4,8 @@
   align-items: center;
   font-family: 'Varela Round', sans-serif;
 }
-
-.board {
-  border: 2px solid #9b9b9b;
-}
+.board {border: 2px solid #9b9b9b;}
 .row {display: flex;}
-
 .tile {
   width: 20px;
   height: 20px;
@@ -20,12 +16,24 @@
   justify-content: center;
   align-items: center;
 }
-
-.tile > * {display: none;}
 .tile__revealed {
   background-color: #9b9b9b;
   border-color: #dddddd;
 }
+.tile > * {display: none;}
 .tile__bombed > .bomb {display: block;}
 .tile__flagged > .flag {display: block;}
 .tile__counted > .count {display: block;}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid gray;
+  display: none;
+}
+
+.modal__visible {display: block;}
