@@ -10,8 +10,9 @@ class Game extends React.Component {
     this.updateGame = this.updateGame.bind(this)
   }
 
-  updateGame() {
-    debugger
+  updateGame(tile, flagging) {
+    flagging ? tile.toggleFlag() : tile.explore()
+    this.setState({ board: this.state.board })
   }
 
   render() {

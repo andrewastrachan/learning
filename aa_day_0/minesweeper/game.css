@@ -28,3 +28,4 @@
 }
 .tile__bombed > .bomb {display: block;}
 .tile__flagged > .flag {display: block;}
+.tile__counted > .count {display: block;}
