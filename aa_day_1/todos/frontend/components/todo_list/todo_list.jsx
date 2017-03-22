@@ -1,7 +1,8 @@
 import React from 'react'
+import TodoListItem from './todo_list_item'
 
 const TodoList = ({ todos, receiveTodo }) => {
-  const todoComponents = todos.map(todo => <li key={todo.id}>{todo.title}</li>)
+  const todoComponents = todos.map(todo => <TodoListItem key={ todo.id } todo={ todo }/>)
 
   return <ul>{todoComponents}</ul>
 }
