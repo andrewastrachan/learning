@@ -1,9 +1,5 @@
-const allTodos = (store) => {
-  const todos    = store.getState().todos
+export const allTodos = (state) => {
+  const todos    = state.todos
   const todoKeys = Object.keys(todos)
-  return todoKeys.map((key) => {return todos[key]})
+  return todoKeys.map((key) => todos[key])
 }
-
-export default allTodos
-
-window.allTodos = allTodos
