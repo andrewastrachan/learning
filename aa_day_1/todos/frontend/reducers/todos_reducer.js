@@ -17,6 +17,10 @@ const initialState = {
   }
 };
 
+const todoSteps = {
+
+}
+
 const todosReducer = (state=initialState, action) => {
   Object.freeze(state);
   let newTodos

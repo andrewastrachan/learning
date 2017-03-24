@@ -1,4 +1,5 @@
 import React from 'react'
+import { merge } from 'lodash'
 
 export default class TodoListItem extends React.Component {
   constructor(props) {
@@ -12,8 +13,8 @@ export default class TodoListItem extends React.Component {
   }
 
   toggleTodo(e) {
-    this.props.todo.done = !this.props.todo.done
-    this.props.receiveTodo(this.props.todo)
+    const newTodo = merge({}, this.props.todo, {done: !this.props.todo.done})
+    this.props.receiveTodo(newTodo)
   }
 
   render() {
