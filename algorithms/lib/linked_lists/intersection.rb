@@ -34,8 +34,6 @@ def intersection(node_1, node_2)
   node_1_len = find_list_length(node_1)
   node_2_len = find_list_length(node_2)
   node_len_diff = node_1_len - node_2_len
-  p node_1_len
-  p node_2_len
 
   # these are the runners
   r1 = node_1
@@ -45,10 +43,7 @@ def intersection(node_1, node_2)
     r2 = node_1
   end
 
-  p node_len_diff
   node_len_diff.abs.times {|_| r1 = r1.next}
-  p r1.data
-  p r2.data
 
   while r1
     return r1 if r1 == r2

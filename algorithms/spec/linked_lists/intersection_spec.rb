@@ -16,12 +16,6 @@ describe '#intersection' do
     @second.append_data_to_last('4')
            .append_data_to_last('6')
            .append_node_to_last(@intersection)
-
-    #
-    #  3 - 1 - 5 - 9
-    #                } 7 - 2 - 1
-    #          4 - 6
-    #
   end
 
   it 'should find the intersection' do
