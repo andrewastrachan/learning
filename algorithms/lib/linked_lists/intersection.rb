@@ -2,7 +2,7 @@
 #               } 7 - 2 - 1
 #         4 - 6
 #
-# 7 - 5 = 2 ( diff in list length )
+# Should return Node at 7
 
 # O(A + B) time and O(1) space
 def intersection(node_1, node_2)
