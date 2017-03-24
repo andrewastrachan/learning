@@ -1,5 +1,8 @@
+# O(N) time and O(N) space
 def is_palindrome?(n)
   r1, r2 = n, n #r1 is slow, r2 is fast
+  # This is going to be a linked list
+  # But might want to impelement using a stack
   first_half = nil
 
   while r2 && r2.next

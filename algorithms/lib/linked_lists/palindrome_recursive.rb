@@ -1,3 +1,4 @@
+# O(N) time and O(N) space
 def is_palindrome_recursive?(node, length)
   return node if length == 0 # even
   return node.next if length == 1 #odd

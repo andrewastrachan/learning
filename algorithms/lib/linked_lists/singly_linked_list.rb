@@ -6,25 +6,28 @@ class Node
   end
 
   def append_data_to_last(data)
-    current_node = self
+    ref = self
 
-    while current_node.next
-      current_node = current_node.next
-    end
+    ref = ref.next while ref.next
 
     new_node = Node.new(data)
-    current_node.next = new_node
-    self
+    ref.next = new_node
+    new_node
   end
 
   def append_node_to_last(node)
-    current_node = self
+    ref = self
 
-    while current_node.next
-      current_node = current_node.next
-    end
+    ref = ref.next while ref.next
 
-    current_node.next = node
-    self
+    ref.next = node
+    node
+  end
+
+  def distance_from_tail
+    ref = self
+    count = 1
+    count += 1 while ref = ref.next
+    count
   end
 end
