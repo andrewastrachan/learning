@@ -1,4 +1,4 @@
-def is_pal?(n)
+def is_palindrome?(n)
   r1, r2 = n, n #r1 is slow, r2 is fast
   first_half = nil
 
