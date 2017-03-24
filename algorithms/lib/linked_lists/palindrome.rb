@@ -2,7 +2,7 @@ def is_palindrome?(n)
   r1, r2 = n, n #r1 is slow, r2 is fast
   first_half = nil
 
-  while r2.next
+  while r2 && r2.next
     first_half_next = first_half
     first_half = Node.new(r1.data)
     first_half.next = first_half_next
