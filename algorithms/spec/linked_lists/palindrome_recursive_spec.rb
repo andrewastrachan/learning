@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'linked_lists/palindrome_recursive'
-require 'linked_lists/singly_linked_list'
 
 # Assumption here being that we've already implemented
 # a linked-list length fn that counts in O(N) time:

@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'linked_lists/palindrome'
-require 'linked_lists/singly_linked_list'
 
 describe '#is_palindrome?' do
   context 'even length list' do
