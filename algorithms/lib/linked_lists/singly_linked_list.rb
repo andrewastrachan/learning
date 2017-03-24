@@ -5,7 +5,7 @@ class Node
     @data = data
   end
 
-  def append_to_last(data)
+  def append_data_to_last(data)
     current_node = self
 
     while current_node.next
@@ -15,5 +15,8 @@ class Node
     new_node = Node.new(data)
     current_node.next = new_node
     self
+  end
+
+  def append_node_to_last(node)
   end
 end

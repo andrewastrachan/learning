@@ -6,7 +6,7 @@ describe '#is_palindrome?' do
   context 'even length list' do
     before do
       @list =  Node.new('a')
-      @list.append_to_last('b').append_to_last('b').append_to_last('a')
+      @list.append_data_to_last('b').append_data_to_last('b').append_data_to_last('a')
     end
 
     it 'returns true for palindrome lists' do
@@ -14,7 +14,7 @@ describe '#is_palindrome?' do
     end
 
     it 'returns false for non-palindrome lists' do
-      @list.append_to_last('b').append_to_last('b')
+      @list.append_data_to_last('b').append_data_to_last('b')
       expect(is_palindrome?(@list)).to be_falsey
     end
   end
@@ -23,7 +23,7 @@ describe '#is_palindrome?' do
   context 'odd length list' do
     before do
       @list =  Node.new('a')
-      @list.append_to_last('b').append_to_last('a')
+      @list.append_data_to_last('b').append_data_to_last('a')
     end
 
     it 'returns true for palindrome lists' do
@@ -31,7 +31,7 @@ describe '#is_palindrome?' do
     end
 
     it 'returns false for non-palindrome lists' do
-      @list.append_to_last('b').append_to_last('b')
+      @list.append_data_to_last('b').append_data_to_last('b')
       expect(is_palindrome?(@list)).to be_falsey
     end
   end
