@@ -5,7 +5,7 @@ import { receiveTodo, removeTodo } from '../../actions/todo_actions'
 import todoDetailView from './todo_detail_view'
 
 const mapDispatchToProps = (dispatch, {todo}) => ({
-  removeTodo: (id) => dispatch(removeTodo(todo.id))
+  removeTodo: () => dispatch(removeTodo(todo.id))
 })
 
 const createConnectedComponenet = connect(null, mapDispatchToProps)
