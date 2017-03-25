@@ -1,15 +1,11 @@
 import React from 'react'
 import { merge } from 'lodash'
+import TodoDetailViewContainer from './todo_detail_view_container'
 
 export default class TodoListItem extends React.Component {
   constructor(props) {
     super(props)
-    this.deleteTodo = this.deleteTodo.bind(this)
     this.toggleTodo = this.toggleTodo.bind(this)
-  }
-
-  deleteTodo(e) {
-    this.props.removeTodo(this.props.todo.id)
   }
 
   toggleTodo(e) {
@@ -20,8 +16,7 @@ export default class TodoListItem extends React.Component {
   render() {
     return (
       <li>
-        <div>{ this.props.todo.title }</div>
-        <button onClick={ this.deleteTodo }>Delete</button>
+        <TodoDetailViewContainer todo={this.props.todo}/>
         <button onClick={ this.toggleTodo }>{ this.props.todo.done ? 'Undo' : 'Finish' }</button>
       </li>
     )

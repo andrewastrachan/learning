@@ -9,8 +9,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  receiveTodo: (todo) => dispatch(receiveTodo(todo)),
-  removeTodo: (id) => dispatch(removeTodo(id))
+  receiveTodo: (todo) => dispatch(receiveTodo(todo))
 })
 
 const createConnectedComponenet = connect(mapStateToProps, mapDispatchToProps)
