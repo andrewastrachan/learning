@@ -1,7 +1,6 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import { allTodos } from '../../reducers/selectors'
-import { receiveTodo, removeTodo } from '../../actions/todo_actions'
+import { receiveTodo } from '../../actions/todo_actions'
 import TodoList from './todo_list'
 
 const mapStateToProps = (state) => ({

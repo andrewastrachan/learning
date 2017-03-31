@@ -5,7 +5,9 @@ import TodoDetailViewContainer from './todo_detail_view_container'
 export default class TodoListItem extends React.Component {
   constructor(props) {
     super(props)
+    this.state = { detail: false }
     this.toggleTodo = this.toggleTodo.bind(this)
+    this.toggleDetail = this.toggleDetail.bind(this)
   }
 
   toggleTodo(e) {
@@ -13,11 +15,26 @@ export default class TodoListItem extends React.Component {
     this.props.receiveTodo(newTodo)
   }
 
+  toggleDetail(e) {
+    e.preventDefault()
+    this.setState({ detail: !this.state.detail })
+  }
+
   render() {
+    let detail
+
+    if (this.state.detail) {
+      detail = <TodoDetailViewContainer todo={this.props.todo}/>
+    }
+
     return (
       <li>
-        <TodoDetailViewContainer todo={this.props.todo}/>
+        <div>
+          <h2>{ this.props.todo.title }</h2>
+        </div>
         <button onClick={ this.toggleTodo }>{ this.props.todo.done ? 'Undo' : 'Finish' }</button>
+        <button onClick={ this.toggleDetail }>{ this.state.detail ? 'Hide' : 'Show' }</button>
+        { detail }
       </li>
     )
   }
