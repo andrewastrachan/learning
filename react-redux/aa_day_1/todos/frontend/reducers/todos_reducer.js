@@ -1,7 +1,6 @@
 import { RECIEVE_TODOS, RECIEVE_TODO, REMOVE_TODO } from '../actions/todo_actions.js'
 import { merge } from 'lodash'
 
-//Test
 const initialState = {
   1: {
     id: 1,
@@ -16,10 +15,6 @@ const initialState = {
     done: true
   }
 };
-
-const todoSteps = {
-
-}
 
 const todosReducer = (state=initialState, action) => {
   Object.freeze(state);
