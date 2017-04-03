@@ -12,6 +12,5 @@ export const allSteps = state => {
 
 export const stepsByTodoId = (state, todoId) => {
   const steps = allSteps(state)
-  debugger
   return steps.filter(step => step.todo_id == todoId )
 }

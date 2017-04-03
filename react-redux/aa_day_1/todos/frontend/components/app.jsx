@@ -2,9 +2,6 @@ import React from 'react'
 import TodoListContainer from './todo_list/todo_list_container'
 
 const App = () =>
-  <div>
-    <div>Hello, world</div>
-    <TodoListContainer/>
-  </div>
+  <TodoListContainer/>
 
 export default App

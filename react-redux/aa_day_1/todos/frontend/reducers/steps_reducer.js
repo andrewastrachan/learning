@@ -20,7 +20,6 @@ const initialState = {
 const stepsReducer = (state=initialState, action) => {
   Object.freeze(state);
   let newSteps
-
   switch(action.type) {
     case RECEIVE_STEPS:
       newSteps = {}
@@ -28,12 +27,11 @@ const stepsReducer = (state=initialState, action) => {
       return newSteps
     case RECEIVE_STEP:
       newSteps = merge({}, state)
-      debugger
       newSteps[action.step.id] = action.step
       return newSteps
     case REMOVE_STEP:
       newSteps = merge({}, state)
-      delete newSteps[todo.id]
+      delete newSteps[action.id]
       return newSteps
     default:
       return state
