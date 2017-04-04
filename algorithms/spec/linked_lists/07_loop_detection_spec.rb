@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'linked_lists/loop_detection'
+require 'linked_lists/07_loop_detection'
 
 describe '#detect_first_loop_node' do
   before do

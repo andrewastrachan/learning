@@ -5,7 +5,7 @@ require 'stacks_and_queues/queue'
 def directed_graph_has_route?(root, dest)
   return unless root && dest
 
-  queue = MyQueue::Queue.new(root)
+  queue = MyQueue.new(root)
 
   while !queue.empty?
     current_node = queue.dequeue

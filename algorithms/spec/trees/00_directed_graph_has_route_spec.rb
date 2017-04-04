@@ -1,4 +1,4 @@
-require 'trees/directed_graph_has_route'
+require 'trees/00_directed_graph_has_route'
 require 'trees/directed_graph_node'
 require 'spec_helper'
 

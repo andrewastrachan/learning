@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'linked_lists/intersection'
+require 'linked_lists/06_intersection'
 
 describe '#intersection' do
   before do

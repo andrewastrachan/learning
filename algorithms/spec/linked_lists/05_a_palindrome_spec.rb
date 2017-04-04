@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'linked_lists/palindrome'
+require 'linked_lists/05_a_palindrome'
 
 describe '#is_palindrome?' do
   context 'even length list' do

@@ -1,4 +1,5 @@
 class Stack
+  class EmptyStackError < StandardError; end
   class Node
     attr_accessor :next
 
@@ -15,15 +16,22 @@ class Stack
     new_top = Node.new(data)
     new_top.next = @top
     @top = new_top
+    self
   end
 
   def pop
+    raise EmptyStackError if empty?
     popped = @top
     @top = @top.next if @top
-    popped
+    popped.data
+  end
+
+  def empty?
+    !@top
   end
 
   def peek
-    @top
+    raise EmptyStackError if empty?
+    @top.data
   end
 end
