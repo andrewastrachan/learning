@@ -1,5 +1,7 @@
 class Api::TodosController < ApplicationController
-  def index; end
+  def index
+    render json: {todos: Todo.select(:id, :title, :body, :done)}, status: :ok
+  end
   def show; end
   def create; end
   def update; end
