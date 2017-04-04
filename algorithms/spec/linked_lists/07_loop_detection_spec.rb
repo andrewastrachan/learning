@@ -3,7 +3,7 @@ require 'linked_lists/07_loop_detection'
 
 describe '#detect_first_loop_node' do
   before do
-    @list = Node.new('a')
+    @list = SinglyLinkedList::Node.new('a')
     @loop_start = @list.append_data_to_last('b')
                        .append_data_to_last('c')
     @last_node = @loop_start.append_data_to_last('d')

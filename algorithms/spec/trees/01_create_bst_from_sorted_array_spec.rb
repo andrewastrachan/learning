@@ -1,5 +1,5 @@
-require 'trees/01_create_bst_from_sorted_array'
 require 'spec_helper'
+require 'trees/01_create_bst_from_sorted_array'
 
 describe '#create_bst_from_sorted_array' do
   subject {create_bst_from_sorted_array([1,2,3,4,5,6,7])}

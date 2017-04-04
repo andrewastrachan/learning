@@ -7,7 +7,7 @@ require 'linked_lists/05_b_palindrome_recursive'
 describe '#is_palindrome_recursive?' do
   context 'even length list' do
     before do
-      @list =  Node.new('a')
+      @list =  SinglyLinkedList::Node.new('a')
       @list.append_data_to_last('b').append_data_to_last('b').append_data_to_last('a')
     end
 
@@ -24,7 +24,7 @@ describe '#is_palindrome_recursive?' do
 
   context 'odd length list' do
     before do
-      @list =  Node.new('a')
+      @list =  SinglyLinkedList::Node.new('a')
       @list.append_data_to_last('b').append_data_to_last('a')
     end
 

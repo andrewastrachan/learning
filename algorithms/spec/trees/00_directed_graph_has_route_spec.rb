@@ -1,6 +1,5 @@
-require 'trees/00_directed_graph_has_route'
-require 'trees/directed_graph_node'
 require 'spec_helper'
+require 'trees/00_directed_graph_has_route'
 
 describe '#directed_graph_has_route?' do
   before do

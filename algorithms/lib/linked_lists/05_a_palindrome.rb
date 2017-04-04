@@ -7,7 +7,7 @@ def is_palindrome?(n)
 
   while r2 && r2.next
     first_half_next = first_half
-    first_half = Node.new(r1.data)
+    first_half = SinglyLinkedList::Node.new(r1.data)
     first_half.next = first_half_next
 
     r1 = r1.next
