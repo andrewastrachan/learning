@@ -5,7 +5,7 @@ require 'linked_lists/singly_linked_list'
 def list_of_depths(bst_node, depth = 0, linked_lists = [])
   return unless bst_node
 
-  list_node = SinglyLinkedList::Node.new(bst_node.data)
+  list_node = SinglyLinkedList::Node.new(bst_node)
   list_node.next = linked_lists[depth] if linked_lists[depth]
   linked_lists[depth] = list_node
 
