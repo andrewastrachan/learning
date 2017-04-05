@@ -23,6 +23,6 @@ describe '#list_of_depths' do
   end
 
   it 'the linked lists contain the correct data' do
-    expect(subject.map(&:to_a)).to eq [[4], [2,6], [1,3,5,7]]
+    expect(subject.map(&:to_a)).to eq [[4], [6,2], [7,5,3,1]]
   end
 end
