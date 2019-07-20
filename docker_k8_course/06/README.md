@@ -3,6 +3,7 @@
 ## [59] Development Workflow
 Workflow we're going to automate (standard)
 Development -> Testing -> Deployment -> Development
+
 **! In this section, we're implementing the standard production workflow**
 
 ## [60] Flow Specifics
