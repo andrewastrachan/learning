@@ -8,8 +8,8 @@
 
 ## [50] Assembling a Dockerfile
 ```bash
-  docker build -t andrewastrachan92/visits:latest
-  docker run andrewastrachan92/visits
+docker build -t andrewastrachan92/visits:latest
+docker run andrewastrachan92/visits
 ```
 **! Created a Dockerfile for the node application**
 ## [51] Introducing Docker Compose
