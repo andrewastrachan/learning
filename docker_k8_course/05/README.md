@@ -11,7 +11,7 @@
   docker build -t andrewastrachan92/visits:latest
   docker run andrewastrachan92/visits
 ```
-! Created a Dockerfile for the node application
+**! Created a Dockerfile for the node application**
 ## [51] Introducing Docker Compose
 - Our Node docker application fails to start because there is no redis server to connect to
 
