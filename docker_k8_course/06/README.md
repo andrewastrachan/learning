@@ -21,11 +21,16 @@ Github repo (using this repo, will create feature branch of this guy):
 ## [61] Docker's Purpose
 **! While docker is not necessary for the CI workflow, it makes executing these tasks much easier.**
 
-## [62]
-**!**
+## [62] Project Generation
+**! Focus of this section is not the code running in the container, but we'll be testing and deploying a react FE. Project generator is available via npm`**
 
-## [63]
-**!**
+## [63] More on Project Generation
+**! download project gen tool with `npm install -g create-react-app` to generate `create-react-app frontend`**
 
-## [64]
-**!**
+## [64] Necessary Commands
+```bash
+npm run start # development only command; development server, no appropriate for production
+npm run test
+npm run build # builds a production version of our application
+```
+**! The above commands are the standard list we will be using for this section**
