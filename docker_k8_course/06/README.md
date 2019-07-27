@@ -20,12 +20,15 @@ Github repo (using this repo, will create feature branch of this guy):
 **! We're setting up testing using Travis CI and deploying to AWS Elastic Beanstalk**
 
 ## [61] Docker's Purpose
+
 **! While docker is not necessary for the CI workflow, it makes executing these tasks much easier.**
 
 ## [62] Project Generation
+
 **! Focus of this section is not the code running in the container, but we'll be testing and deploying a react FE. Project generator is available via npm`**
 
 ## [63] More on Project Generation
+
 **! download project gen tool with `npm install -g create-react-app` to generate `create-react-app frontend`**
 
 ## [64] Necessary Commands
@@ -34,20 +37,25 @@ npm run start # development only command; development server, no appropriate for
 npm run test
 npm run build # builds a production version of our application
 ```
+
 **! The above commands are the standard list we will be using for this section**
 
 ## [65] Creating the Dev Dockerfile
+
 **! We'll have two Dockerfiles; dev naming convention is `Dockerfile.dev`. We can run it with the `docker run ` + `-f` option: `docker run -f Dockerfile.dev .`**
 
 ## [66] Duplicating Dependencies
+
 **! Careful what you copy over to your Docker image. One no-no would be to send your local npm cache to the image. 1) It makes the install slow 2) You end up overwriting the cache there with your local one (bad if you installed in prod mode).**
 
 ## [67] Starting the Container
 - Remember to port-map using the -p command
 - Lame thing here is that we really want the container to show local changes as they happen in dev mode
+
 **! This section reviews a problem noted earlier: Local changes do not show up yet without a rebuild.**
 
 ## [68] Quick Note for Windows Users
+
 **! N/A**
 
 ## [69] Docker Volumes
@@ -97,6 +105,7 @@ services:
       - /app/node_modules
       - .:/app
 ```
+
 **! We can add volume mapping to a `docker-compose.yml` file with the `volunes:` key**
 
 ## [72] Overriding Dockerfile Selection
@@ -111,12 +120,14 @@ services:
 ```
 - `context`: Where to look for project files
 - `dockerfile`: Where is the dockerfile
+
 **! We can tweak the `build` key in our `docker-compose.yml` file to allow for a development Dockerfile**
 
 ## [73] Do we need Copy?
 We could probably get away without using `COPY` but:
 1. We might not use docker compose in the future
 2. We might like to see it as a reminder when creating our production `Dockerfile`
+
 **! We don't really need to keep the main COPY command, but it serves as a nice reminder.**
 
 ## [74] Executing Tests
@@ -197,6 +208,7 @@ When we run `docker attach`, we always attach to the STDIN of the primary proces
 
 ## [78] Need for Nginx
 In production, we don't need (or want) a heavy server running for sending assets to the client. In this course, we'll choose NGINX to service static assets.
+
 **! We're using NGINX for our webserver in production. In the next section, we set up our Dockerfile for this.**
 
 ## [79] Multi-Step Docker Builds
@@ -214,16 +226,22 @@ In production, we don't need (or want) a heavy server running for sending assets
 probably want to use the `nginx:alpine` as the base, but we also want `node:alpine`
 
 _Solution: We'll have 2 phases in our Dockerfile (build and run)_
+
 **New outline of steps:**
+
 BUILD:
+
 1) Use node:alpine
 2) Copy the package.json over
 3) Install Dependencies
 4) Run `npm run build`
+
 RUN:
+
 1) Use nginx
 2) Copy the result of `npm run build`
 3) Start nginx
+
 **! In order to make our production deployment work, we'll need to use a multi-step deployment (multiple base images).**
 
 ## [80] Implementing Multi-Step Builds
@@ -246,6 +264,7 @@ FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
 # the default command of the nginx container is the startup command, so no need for a command
 ```
+
 **! In this section we learned how to tag build with `as`, how to start new phases, and how to copy from other phases with the `--from` option of `COPY`.**
 
 ## [81] Running Nginx
@@ -255,4 +274,5 @@ To test locally, we'll run and route traffic from local 8080 to the nginx defaul
 docker build .
 docker run -p 8080:80 <image_id>
 ```
+
 **! We can launch the nginx container fairly simply with `docker run` command bound to port 80.**
