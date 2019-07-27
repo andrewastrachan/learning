@@ -17,11 +17,34 @@
 
 ## [85] Travis YML File Configuration
 
-**! synopsis here**
+**Instructions in `.travis.yml`:**
+1) Tell Travis we need a copy of docker running.
+2) Build our image using our `Dockerfile.dev`.
+3) Tell Travis how to run our test suite.
+4) Tell Travis how to deploy our code to AWS.
+
+```yml
+# docker requires sudo
+sudo: required
+# we need the docker service
+services:
+  - docker
+# what to run for setup
+before_install:
+  - docker build -t andrewastrachan92/docker-react -f Dockerfile.dev
+```
+
+**! The travis.yml file makes integration with docker easy. See above.**
 
 ## [86] Fix for Failing Travis Builds
 
-**! synopsis here**
+```yml
+sudo: required
+script:
+  - docker run -e CI=true USERNAME/docker-react npm run test
+```
+
+**! There were some changes to the `.travis.yml` due to recent jest changes.**
 
 ## [87] A Touch More Travis Setup
 
